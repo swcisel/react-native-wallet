@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03C240B41F2A730800EF9D85 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C240B31F2A730800EF9D85 /* PassKit.framework */; };
+		14920D8B1FA1042E006AB755 /* RNAddPassButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14920D8A1FA1042E006AB755 /* RNAddPassButtonManager.m */; };
+		14920D8D1FA109FF006AB755 /* RNAddPassButtonManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14920D891FA1042E006AB755 /* RNAddPassButtonManager.h */; };
 		2FA282053E39A15B48DC40A7 /* RNWalletModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FA28BB3E18B86429CE84FFC /* RNWalletModule.h */; };
 		2FA285363CAEB226F3EAC5C3 /* RNWalletModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28CD4ED699808829272C7 /* RNWalletModule.m */; };
 /* End PBXBuildFile section */
@@ -19,6 +21,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				14920D8D1FA109FF006AB755 /* RNAddPassButtonManager.h in CopyFiles */,
 				2FA282053E39A15B48DC40A7 /* RNWalletModule.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -27,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		03C240B31F2A730800EF9D85 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		14920D891FA1042E006AB755 /* RNAddPassButtonManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNAddPassButtonManager.h; sourceTree = "<group>"; };
+		14920D8A1FA1042E006AB755 /* RNAddPassButtonManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNAddPassButtonManager.m; sourceTree = "<group>"; };
 		2FA284D2B36EEBECA56B56E3 /* libRNWalletModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNWalletModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA28BB3E18B86429CE84FFC /* RNWalletModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNWalletModule.h; sourceTree = "<group>"; };
 		2FA28CD4ED699808829272C7 /* RNWalletModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNWalletModule.m; sourceTree = "<group>"; };
@@ -52,9 +57,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		14920D851FA10357006AB755 /* RNAddPassButton */ = {
+			isa = PBXGroup;
+			children = (
+				14920D891FA1042E006AB755 /* RNAddPassButtonManager.h */,
+				14920D8A1FA1042E006AB755 /* RNAddPassButtonManager.m */,
+			);
+			path = RNAddPassButton;
+			sourceTree = "<group>";
+		};
 		2FA283FB6E1E2E12E8B5F3EF = {
 			isa = PBXGroup;
 			children = (
+				14920D851FA10357006AB755 /* RNAddPassButton */,
 				2FA28A0ECA8A72CF7813E839 /* Products */,
 				2FA288CD26BDFC622DC2FAF7 /* RNWalletModule */,
 				03C240B21F2A730800EF9D85 /* Frameworks */,
@@ -128,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14920D8B1FA1042E006AB755 /* RNAddPassButtonManager.m in Sources */,
 				2FA285363CAEB226F3EAC5C3 /* RNWalletModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
