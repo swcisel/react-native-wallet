@@ -12,7 +12,7 @@ function _canAddPasses(Module, callback) {
   if (!!Module) {
   	Module.canAddPasses(result => {
 		  callback(result);
-	  })
+	  });
   }
 }
 
