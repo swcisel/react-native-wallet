@@ -33,7 +33,13 @@ class _AddPassButton extends Component {
       this.onAddToWalletPress = this.onAddToWalletPress.bind(this);
    }
    onAddToWalletPress() {
-		_showAddPassController (RNWalletModule, this.props.passUrl);
+		const showAddPassControllerPromise = _showAddPassController (RNWalletModule, this.props.passUrl);
+		if (!!this.props.onAddToWalletPress) {
+		   this.props.onAddToWalletPress(showAddPassControllerPromise);
+      }
+      else {
+		   return showAddPassControllerPromise;
+      }
    }
 	render () {
 		return (
