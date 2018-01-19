@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import { View, TouchableWithoutFeedback, NativeModules, requireNativeComponent} from 'react-native';
+import React, { Component } from 'react';
+import { View, TouchableWithoutFeedback, NativeModules, requireNativeComponent } from 'react-native';
 
-const { RNWalletModule } = NativeModules;
+const { RNWalletModule }     = NativeModules;
 const AddPassButtonComponent = requireNativeComponent('RNAddPassButton', _AddPassButton);
 
 /**
@@ -9,11 +9,11 @@ const AddPassButtonComponent = requireNativeComponent('RNAddPassButton', _AddPas
  * @param callback A callback which will receive a boolean
  */
 function _canAddPasses(Module, callback) {
-  if (!!Module) {
-  	Module.canAddPasses(result => {
-		  callback(result);
-	  });
-  }
+	if (!!Module) {
+		Module.canAddPasses(result => {
+			callback(result);
+		});
+	}
 }
 
 /**
@@ -23,25 +23,27 @@ function _canAddPasses(Module, callback) {
  * @return Promise Passing a boolean
  */
 function _showAddPassController(Module, passURL) {
-  return Module.showAddPassController(passURL);
+	return Module.showAddPassController(passURL);
 }
 
 
 class _AddPassButton extends Component {
-   constructor (props) {
-      super (props);
-      this.onAddToWalletPress = this.onAddToWalletPress.bind(this);
-   }
-   onAddToWalletPress() {
-		const showAddPassControllerPromise = _showAddPassController (RNWalletModule, this.props.passUrl);
-		if (!!this.props.onAddToWalletPress) {
-		   this.props.onAddToWalletPress(showAddPassControllerPromise);
-      }
-      else {
-		   return showAddPassControllerPromise;
-      }
-   }
-	render () {
+	constructor(props) {
+		super(props);
+		this.onAddToWalletPress = this.onAddToWalletPress.bind(this);
+	}
+
+	onAddToWalletPress() {
+		const showAddPassControllerPromise = _showAddPassController(RNWalletModule, this.props.passUrl);
+		if (!!this.props.showAddPassCallback) {
+			this.props.showAddPassCallback(showAddPassControllerPromise);
+		}
+		else {
+			return showAddPassControllerPromise;
+		}
+	}
+
+	render() {
 		return (
 			<TouchableWithoutFeedback onPress={this.onAddToWalletPress}>
 				<AddPassButtonComponent {...this.props}></AddPassButtonComponent>
@@ -51,7 +53,7 @@ class _AddPassButton extends Component {
 }
 
 module.exports = {
-  _canAddPasses,
-  _showAddPassController,
+	_canAddPasses,
+	_showAddPassController,
 	_AddPassButton
 }
