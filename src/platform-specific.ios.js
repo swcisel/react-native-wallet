@@ -33,7 +33,6 @@ class _AddPassButton extends Component {
       this.onAddToWalletPress = this.onAddToWalletPress.bind(this);
    }
    onAddToWalletPress() {
-      console.log('this.props!', this.props);
 		_showAddPassController (RNWalletModule, this.props.passUrl);
    }
 	render () {
