@@ -1,6 +1,6 @@
 {
   "_from": "git+https://github.com/swcisel/react-native-wallet.git",
-  "_id": "react-native-wallet@1.0.2",
+  "_id": "react-native-wallet@1.1.0",
   "_inBundle": false,
   "_integrity": "sha1-sqH1buzjOwjPBsL/2vXGWg8xxJg=",
   "_location": "/react-native-wallet",
@@ -56,5 +56,5 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
-  "version": "1.0.2"
+  "version": "1.1.0"
 }
