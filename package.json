@@ -1,25 +1,5 @@
 {
-  "_from": "git+https://github.com/swcisel/react-native-wallet.git",
-  "_id": "react-native-wallet@1.0.2",
-  "_inBundle": false,
-  "_integrity": "sha1-sqH1buzjOwjPBsL/2vXGWg8xxJg=",
-  "_location": "/react-native-wallet",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "git",
-    "raw": "https://github.com/swcisel/react-native-wallet.git",
-    "rawSpec": "https://github.com/swcisel/react-native-wallet.git",
-    "saveSpec": "git+https://github.com/swcisel/react-native-wallet.git",
-    "fetchSpec": "https://github.com/swcisel/react-native-wallet.git",
-    "gitCommittish": "master"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "git+https://github.com/swcisel/react-native-wallet.git#081daa91789aa2a7c553e9f8e89337a8687526e5",
-  "_spec": "https://github.com/swcisel/react-native-wallet.git",
-  "_where": "/Users/sean/projects/banner-mobile",
+  "name": "react-native-wallet",
   "author": {
     "name": "Erik Poort"
   },
@@ -44,7 +24,6 @@
   ],
   "license": "GNU General Public License v3.0",
   "main": "src/index.js",
-  "name": "react-native-wallet",
   "peerDependencies": {
     "react": ">=16.0.0-alpha.6",
     "react-native": ">=0.46.0"
@@ -56,5 +35,5 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
-  "version": "1.0.2"
+  "version": "1.1.0"
 }
