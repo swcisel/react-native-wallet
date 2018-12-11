@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
   s.source_files  = "ios/Classes", "ios/Classes/**/*.{h,m}"
   s.exclude_files = "ios/Classes/Exclude"
   s.dependency 'React'
+  s.ios.deployment_target = '6.0'
 end
