@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.license      = package['license']
   s.author             = { "Sean Wcisel" => "email@address.com" }
   s.source       = { :git => "https://github.com/swcisel/react-native-wallet.git", :tag => "#{s.version}" }
-  s.source_files  = "ios/Classes", "ios/Classes/**/*.{h,m}"
+  s.source_files  = "ios/Classes/**/*.{h,m}"
   s.exclude_files = "ios/Classes/Exclude"
+  s.ios.deployment_target = '8.0'
   s.dependency 'React'
-  s.ios.deployment_target = '6.0'
 end

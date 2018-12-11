@@ -1,5 +1,6 @@
 {
   "name": "react-native-wallet",
+  "version": "1.1.2",
   "author": {
     "name": "Erik Poort"
   },
@@ -34,6 +35,5 @@
   },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"
-  },
-  "version": "1.1.0"
+  }
 }
